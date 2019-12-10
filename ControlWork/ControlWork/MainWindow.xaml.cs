@@ -31,6 +31,7 @@ namespace ControlWork
 
         public MainWindow()
         {
+            timer.Tick += ScreenShot;
             InitializeComponent();
         }
 
@@ -60,7 +61,6 @@ namespace ControlWork
                 MessageBox.Show("Некорректные данные!");
                 return;
             }
-            timer.Tick += ScreenShot;
             timer.Start();
         }
 
